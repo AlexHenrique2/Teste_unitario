@@ -7,12 +7,12 @@ public class VelocidadeInerciaService {
 
     class Velocidades {
 
-        float velocidadeX;
+        float velocidadeX = 30000;
         float velocidadeY;
         float velocidadeZ;
     }
 
-    public Velocidades conversaoDouble (float velocidadeX, float velocidadeY, float velocidadeZ) {
+    public Velocidades conversaoInt (float velocidadeX, float velocidadeY, float velocidadeZ) {
 
         Velocidades velocidades = new Velocidades(); 
         velocidades.velocidadeX = (int) velocidadeX; 
@@ -23,12 +23,12 @@ public class VelocidadeInerciaService {
 
     public Velocidades converter (float velocidadeX, float velocidadeY, float velocidadeZ) {
         if (velocidadeX > 20000) {
-            return conversaoDouble(velocidadeX, velocidadeY, velocidadeZ);
+            return conversaoInt(velocidadeX, velocidadeY, velocidadeZ);
         } else {
             Velocidades velocidades = new Velocidades();
             velocidades.velocidadeX = velocidadeX; 
             velocidades.velocidadeY = velocidadeY; 
-             velocidades.velocidadeZ = velocidadeZ;
+            velocidades.velocidadeZ = velocidadeZ;
             return velocidades;
         }
     }

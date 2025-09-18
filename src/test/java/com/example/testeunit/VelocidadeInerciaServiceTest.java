@@ -1,5 +1,6 @@
 package com.example.testeunit; 
 
+// Bibliotecas spring e JUnit
 import org.junit.jupiter.api.Test; 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,9 +8,10 @@ class VelocidadeInerciaServiceTest {
 
     private final VelocidadeInerciaService service = new VelocidadeInerciaService();
 
+    //Teste se 
     @Test 
     void TesteConversao() {
-        float entrada = 5000000;  
+        float entrada = 452342;  
         var velocidades = service.converter(entrada, entrada, entrada);
 
         assertEquals(entrada, velocidades.velocidadeX);
